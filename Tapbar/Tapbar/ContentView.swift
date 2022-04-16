@@ -10,11 +10,6 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView{
-            Home()
-                .tabItem{
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
             Drink()
                 .tabItem{
                     Image(systemName: "drop.fill")
@@ -30,40 +25,65 @@ struct ContentView: View {
     }
 }
 
-struct Home: View{
-    var body: some View{
-        Text("Home")
-            .font(.system(size: 24))
-            .foregroundColor(.black)
-            .padding()
-            .frame(width: 150, height: 150, alignment: .center)
-            .background(.green)
-            .cornerRadius(50)
-        
-    }
-}
 struct Drink: View{
     var body: some View{
-        Text("Drink")
-            .font(.system(size: 24))
-            .foregroundColor(.black)
-            .padding()
-            .frame(width: 150, height: 150, alignment: .center)
-            .background(.green)
-            .cornerRadius(50)
+        List{
+            Text("Coke")
+                .font(.system(size: 24))
+                .foregroundColor(.black)
+                .padding()
+                .frame(width: 150, height: 50, alignment: .center)
+                .background(.green)
+                .cornerRadius(10)
+                .padding(.horizontal, 100)
+            Text("Sprite")
+                .font(.system(size: 24))
+                .foregroundColor(.black)
+                .padding()
+                .frame(width: 150, height: 50, alignment: .center)
+                .background(.green)
+                .cornerRadius(10)
+                .padding(.horizontal, 100)
+            Text("Pepsi")
+                .font(.system(size: 24))
+                .foregroundColor(.black)
+                .padding()
+                .frame(width: 150, height: 50, alignment: .center)
+                .background(.green)
+                .cornerRadius(10)
+                .padding(.horizontal, 100)
+        }
         
     }
 }
 struct Food: View{
     var body: some View{
-        Text("Food")
+        List{
+        Text("Pizza")
             .font(.system(size: 24))
             .foregroundColor(.black)
             .padding()
-            .frame(width: 150, height: 150, alignment: .center)
+            .frame(width: 150, height: 50, alignment: .center)
             .background(.green)
-            .cornerRadius(50)
-        
+            .cornerRadius(10)
+            .padding(.horizontal, 100)
+        Text("Burger")
+            .font(.system(size: 24))
+            .foregroundColor(.black)
+            .padding()
+            .frame(width: 150, height: 50, alignment: .center)
+            .background(.green)
+            .cornerRadius(10)
+            .padding(.horizontal, 100)
+        Text("Momos")
+            .font(.system(size: 24))
+            .foregroundColor(.black)
+            .padding()
+            .frame(width: 150, height: 50, alignment: .center)
+            .background(.green)
+            .cornerRadius(10)
+            .padding(.horizontal, 100)
+        }
     }
 }
 struct ContentView_Previews: PreviewProvider {
